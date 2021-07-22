@@ -21,7 +21,8 @@ void Sorts::append(int d)
     }
 }
 
-void Sorts::bubbleSort() // adaptive sorting algorithm
+void Sorts::bubbleSort() // adaptive sorting algorithm, but we made it using flag variable. By default it is not
+// adaptive, but we can make it adaptive. So, it is known as an adaptive sorting algorithm
 {
     int s=length+1;
     cout<<"This is Bubble Sort: ";
