@@ -71,7 +71,6 @@ void Sorts::insertionSort() // insertion sort algorithm
     // is positively affected without requiring us to do extra work.
     // because when it is sorted, there is no swapping made.
 
-
     // Another this is that the insertion sort is Stable because when the elements are equal
     // it keeps the order of those elements.
 
