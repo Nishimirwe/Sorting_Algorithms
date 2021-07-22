@@ -15,6 +15,7 @@ int main()
     //s.show();
     //s.insertionSort(0,9);
     s.insertionSort();
+    s.append(34);
     s.show();
     return 0;
 }

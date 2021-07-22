@@ -60,6 +60,10 @@ void Sorts::show()
 
 void Sorts::insertionSort() // insertion sort algorithm
 {
+    // The insertion sort is adaptive sorting algorithm by its nature.
+    // It means that when the array is already sorted, the insertion sort's performance
+    // is positively affected without requiring as to do extra work.
+    // because when it is sorted, there is no swapping made.
     cout<<"This is insertion Sort"<<endl;
    int i=length;
    int start=1,j;
