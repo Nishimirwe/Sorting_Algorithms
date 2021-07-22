@@ -16,6 +16,7 @@ class Sorts
         //array is sorted, the cost is reduced.
         void append(int d);
         void show();
+        void insertionSort(int d, int s);
 
 };
 

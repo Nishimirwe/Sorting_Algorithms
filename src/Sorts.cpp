@@ -56,3 +56,25 @@ void Sorts::show()
     }
     cout<<endl;
 }
+
+
+void Sorts::insertionSort(int d, int s) // insertion sort algorithm
+{
+   int index=s-1;
+   while(arr[index]>d)
+   {
+       arr[index+1]=arr[index];
+       index--;
+   }
+
+   if((index+1)<0)
+   {
+       arr[0]=d;
+   }
+   else
+   {
+       arr[index+1]=d;
+   }
+
+   length++;
+}
