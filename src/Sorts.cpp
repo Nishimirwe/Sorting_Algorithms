@@ -26,7 +26,7 @@ void Sorts::bubbleSort()
     // adaptive sorting algorithm, but we made it using flag variable. By default it is not
     // adaptive, but we can make it adaptive. So, it is known as an adaptive sorting algorithm
 
-    //Again, Bubble sort is also a stable sorting Algorithm, as when element are with same value
+    //Again, Bubble sort is also a stable sorting Algorithm, as when elements are with same value
     // bubble sort preserve the order of those similar elements.
 
     // This bubble sort algorithm is not applicable for linked list.
@@ -71,7 +71,6 @@ void Sorts::insertionSort() // insertion sort algorithm
     // is positively affected without requiring us to do extra work.
     // because when it is sorted, there is no swapping made.
 
-
     // Another this is that the insertion sort is Stable because when the elements are equal
     // it keeps the order of those elements.
 
@@ -95,5 +94,5 @@ void Sorts::insertionSort() // insertion sort algorithm
 }
 ----------------------------------------------------------------------------------------------------------------------
 // UP TO HERE, I WOULD LIKE TO SAY THAT ONLY "BUBBLE SORT AND INSERTION" ARE EVER EXISTING ADAPTIVE SRTING ALGORITHMS |
-// MEANS THAT WHEN ALL ARRAY ELEMENETS ARE ALREADY SORTED, THE PERFORMANCE IS POSOTIVELY AFFECETD.                    |
+// MEANS THAT WHEN ALL ARRAY ELEMENETS ARE ALREADY SORTED, THE PERFORMANCE IS POSITIVELY AFFECETD.                    |
 ----------------------------------------------------------------------------------------------------------------------
