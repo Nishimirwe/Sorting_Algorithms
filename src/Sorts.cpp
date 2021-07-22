@@ -64,6 +64,10 @@ void Sorts::insertionSort() // insertion sort algorithm
     // It means that when the array is already sorted, the insertion sort's performance
     // is positively affected without requiring as to do extra work.
     // because when it is sorted, there is no swapping made.
+
+
+    // Another this is that the insertion sort is Stable because when the elements are equal
+    // it keeps the order of those elements.
     cout<<"This is insertion Sort"<<endl;
    int i=length;
    int start=1,j;
