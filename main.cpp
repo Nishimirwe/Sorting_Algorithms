@@ -11,9 +11,10 @@ int main()
     s.append(4);
     s.append(11);
     s.append(2);
-    s.bubbleSort();
-    s.show();
-    s.insertionSort(0,9);
+    //s.bubbleSort();
+    //s.show();
+    //s.insertionSort(0,9);
+    s.insertionSort();
     s.show();
     return 0;
 }
