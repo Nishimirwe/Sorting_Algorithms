@@ -76,7 +76,7 @@ void Sorts::insertionSort() // insertion sort algorithm
 
     //Insertions is very suitable for linked list than array. It is meant for linked list, because using arrays
     // it requires swapping elements for inserting. But for linked lists, no swapping is required, just insert a node where is appropriate.
-    cout<<"This is insertion Sort"<<endl;
+    cout<<"This is insertion Sort: ";
    int i=length;
    int start=1,j;
    for(int k=start;k<=i;k++)
@@ -97,3 +97,56 @@ void Sorts::insertionSort() // insertion sort algorithm
 // UP TO HERE, I WOULD LIKE TO SAY THAT ONLY "BUBBLE SORT AND INSERTION" ARE EVER EXISTING ADAPTIVE SRTING ALGORITHMS |
 // MEANS THAT WHEN ALL ARRAY ELEMENETS ARE ALREADY SORTED, THE PERFORMANCE IS POSITIVELY AFFECETD.                    |
 //----------------------------------------------------------------------------------------------------------------------
+
+void Sorts::selectionSort()
+{
+    // this is selection sort my version
+    // Down this function I am going to write another logic
+    cout<<"This is selection sort: ";
+    int index=length,j;
+    for(int i=0;i<index;i++) // pass in array up to index -1
+    {
+        j=i+1; // j always start from i+1
+        while(j<=index) // each iteration, move j up to last element
+        {
+            if(arr[i]>arr[j])
+            {
+                // if arr[j] is lesser than the i position
+                // of the array, swap them
+                int t=arr[i];
+                arr[i]=arr[j];
+                arr[j]=t;
+            }
+            j++;
+        }
+    }
+}
+
+void Sorts::selectionSortVersion2()
+{
+    // this selection sort passes through the array and
+    // at each iteration, it saves the index of the smallest element
+    // then swap it with i position. Look
+    cout<<"This is another selection sort version: ";
+    int index=length;
+    int k,j;
+    for(int i=0;i<index;i++)
+    {
+        k=i;
+        j=i+1;
+        while(j<=index)
+        {
+            if(arr[j]<arr[k])
+            {
+                k=j;
+            }
+            j++;
+        }
+        int t=arr[i];
+        arr[i]=arr[k];
+        arr[k]=t;
+    }
+
+    //THIS SELECTION SORT MIGHT THE BEST BECAUSE THERE ARE MINIMUM NUMBER
+    //OF SWAPPING
+}

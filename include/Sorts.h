@@ -3,7 +3,6 @@
 #include<iostream>
 using namespace std;
 
-
 class Sorts
 {
     private:
@@ -17,7 +16,8 @@ class Sorts
         void append(int d);
         void show();
         void insertionSort();
-
+        void selectionSort();
+        void selectionSortVersion2();
 };
 
 #endif // BUBBLESORT_H
