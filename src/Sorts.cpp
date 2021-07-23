@@ -130,7 +130,7 @@ void Sorts::selectionSort()
     }
 }
 
-void Sorts::selectionSortVersion2()
+void Sorts::selectionSortVersion2() // the first sorting algorithm that requires the minimum number of swaps
 {
     // this selection sort passes through the array and
     // at each iteration, it saves the index of the smallest element
