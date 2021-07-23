@@ -102,6 +102,14 @@ void Sorts::selectionSort()
 {
     // this is selection sort my version
     // Down this function I am going to write another logic
+    // My logic says: select position (1),
+    // pass through out the array, keep swapping the smallest array
+    // to position 1. At one iteration, smallest element will be at the 1st position
+    // but number of swapping is large, I will show the second version with small number of swapping
+
+
+    // Here, we select the position and select through out the array, which element
+    // should be in that position, then bring it.
     cout<<"This is selection sort: ";
     int index=length,j;
     for(int i=0;i<index;i++) // pass in array up to index -1
@@ -127,6 +135,9 @@ void Sorts::selectionSortVersion2()
     // this selection sort passes through the array and
     // at each iteration, it saves the index of the smallest element
     // then swap it with i position. Look
+
+    // Here, we select the position and select through out the array, which element
+    // should be in that position, then bring it.
     cout<<"This is another selection sort version: ";
     int index=length;
     int k,j;
@@ -142,11 +153,21 @@ void Sorts::selectionSortVersion2()
             }
             j++;
         }
-        int t=arr[i];
-        arr[i]=arr[k];
-        arr[k]=t;
+        if(i!=k)
+        {
+            int t=arr[i];
+            arr[i]=arr[k];
+            arr[k]=t;
+        }
     }
 
     //THIS SELECTION SORT MIGHT THE BEST BECAUSE THERE ARE MINIMUM NUMBER
     //OF SWAPPING
+
+    //If you look at the implementation of selection sort, this sorting technique is not adaptive
+    //because even though the list might be already sorted, the algorithm
+    //perform the same number of comparison.
+
+    // Again, this selection sort is not also stable because when we have two equal
+    //elements, there is no guarantee that the order of those elements will be preserved.
 }

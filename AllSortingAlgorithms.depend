@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1627026068 source:d:\lessons\coding\c++\codeblocks\allsortingalgorithms\main.cpp
+1627027156 source:d:\lessons\coding\c++\codeblocks\allsortingalgorithms\main.cpp
 	"Sorts.h"
 
 1627025574 d:\lessons\coding\c++\codeblocks\allsortingalgorithms\include\sorts.h
 	<iostream>
 
-1627026073 source:d:\lessons\coding\c++\codeblocks\allsortingalgorithms\src\sorts.cpp
+1627027089 source:d:\lessons\coding\c++\codeblocks\allsortingalgorithms\src\sorts.cpp
 	"Sorts.h"
 
