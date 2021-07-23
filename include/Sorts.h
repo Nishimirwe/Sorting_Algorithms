@@ -18,6 +18,7 @@ class Sorts
         void insertionSort();
         void selectionSort();
         void selectionSortVersion2();
+        int quickSortPartition(int start,int end);
 };
 
 #endif // BUBBLESORT_H
