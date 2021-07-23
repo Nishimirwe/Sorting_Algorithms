@@ -19,6 +19,8 @@ class Sorts
         void selectionSort();
         void selectionSortVersion2();
         int quickSortPartition(int start,int end);
+        void quickSort(int start,int end);
+        int getIndex(){return this->length;}
 };
 
 #endif // BUBBLESORT_H

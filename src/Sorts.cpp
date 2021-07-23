@@ -100,6 +100,8 @@ void Sorts::insertionSort() // insertion sort algorithm
 
 void Sorts::selectionSort()
 {
+    //Time best case: O(nlog(n)), worst case : O(n2) :When list is sorted
+    // average=best case.
     // this is selection sort my version
     // Down this function I am going to write another logic
     // My logic says: select position (1),
@@ -170,4 +172,46 @@ void Sorts::selectionSortVersion2() // the first sorting algorithm that requires
 
     // Again, this selection sort is not also stable because when we have two equal
     //elements, there is no guarantee that the order of those elements will be preserved.
+}
+
+int Sorts::quickSortPartition(int low,int high)
+{
+    // This is the partition function of quick sort
+    // This function returns an Int value, which is where we left
+    // the sorted value in an array.
+    int pivot = arr[low];
+    int i = low;
+    int j = high;
+
+    do {
+        // Increment i as long as elements are smaller/equal to pivot
+        do {i++;} while (arr[i] <= pivot);
+
+        // Decrement j as long as elements are larger than pivot
+        do {j--;} while (arr[j] > pivot);
+
+        if (i < j){
+            int t=arr[i];
+            arr[i]=arr[j];
+            arr[j]=t;
+        }
+    } while (i < j);
+
+    int t=arr[low];
+    arr[low]=arr[j];
+    arr[j]=t;
+    return j;
+
+}
+
+void Sorts::quickSort(int start, int end)
+{
+    // Quick sort is also called "Selection exchange sort, or Partition Exchange sort
+    if(end>start)
+    {
+
+    int mid=quickSortPartition(start,end);
+        quickSort(start,mid);
+        quickSort(mid+1,end);
+    }
 }

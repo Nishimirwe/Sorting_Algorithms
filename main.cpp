@@ -20,5 +20,7 @@ int main()
     //s.insertionSort();
     //s.selectionSort();
     //s.selectionSortVersion2();
+    s.quickSort(0,s.getIndex());
+    s.show();
     return 0;
 }
