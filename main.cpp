@@ -35,9 +35,9 @@ int main()
     int si=s.getIndex();
     //cout<<"Merge Sort: "<<endl;
     //s.mergeSort(0,si);
-    cout<<"Quick Sort: "<<endl;
-    s.quickerSort(0,si);
-    s.show();
+    //cout<<"Quick Sort: "<<endl;
+    //s.quickerSort(0,si);
+    //s.show();
     cout<<"--------------------------------------------"<<endl;
 
     // AMA GONNA START RADIX SORT, COUNT SORT, BIN/BUCKET SORT AND SHELL SORT

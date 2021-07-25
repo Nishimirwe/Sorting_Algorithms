@@ -329,12 +329,14 @@ void Sorts::countSort()
     {
         if(li[i]!=0)
         {
-            for(int g=1;g<=li[i];g++)
+            while(li[i]>0)
             {
-                out<<i<<" ";
+                cout<<i<<" ";
+                //arr[s++]=i;
+                li[i]--;
             }
         }
     }
-    out<<endl<<s;
+    out<<endl<<s<<" Length "<<length;
     cout<<endl;
 }
