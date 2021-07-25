@@ -279,3 +279,60 @@ void Sorts::quickerSort(int l, int h)
         quickerSort(m+1,h);
     }
 }
+
+// DOWN I AM GON CODE OTHER ALGORITHMS WHICH TAKE LITTLE TIME BUT WITH LARGE SPACE
+int Sorts::small()
+{
+    if(length<0)
+    {
+        return -1;
+    }
+    int m=arr[0];
+    for(int i=0;i<=length;i++)
+    {
+        if(arr[i]<m)
+        {
+            m=arr[i];
+        }
+    }
+    return m;
+}
+
+int Sorts::big()
+{
+    if(length<0)
+    {
+        return -1;
+    }
+    int m=arr[0];
+    for(int i=0;i<=length;i++)
+    {
+        if(arr[i]>m)
+        {
+            m=arr[i];
+        }
+    }
+    return m;
+}
+
+// let us start count sort
+void Sorts::countSort()
+{
+    ofstream out("files/output.txt");
+    int li[big()]={0};
+    for(int i=0;i<=length;i++)
+    {
+        li[arr[i]]++;
+    }
+    for(int i=0;i<=big();i++)
+    {
+        if(li[i]!=0)
+        {
+            for(int g=1;g<=li[i];g++)
+            {
+                out<<i<<" ";
+            }
+        }
+    }
+    cout<<endl;
+}

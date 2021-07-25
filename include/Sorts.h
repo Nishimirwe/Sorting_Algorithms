@@ -25,8 +25,11 @@ class Sorts
         int getIndex(){return this->length;}
         void merging(int low,int high);
         void mergeSort(int low, int high);
+        int big();
+        int small();
         int quickerPartition(int l, int h);
         void quickerSort(int l,int h);
+        void countSort();
 };
 
 #endif // BUBBLESORT_H
