@@ -54,5 +54,6 @@ int main()
     srt.append(3);
     srt.append(9);
     srt.countSort();
+    //srt.show();
     return 0;
 }

@@ -324,6 +324,7 @@ void Sorts::countSort()
     {
         li[arr[i]]++;
     }
+    int s=0;
     for(int i=0;i<=big();i++)
     {
         if(li[i]!=0)
@@ -334,5 +335,6 @@ void Sorts::countSort()
             }
         }
     }
+    out<<endl<<s;
     cout<<endl;
 }
