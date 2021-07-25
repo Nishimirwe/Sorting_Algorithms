@@ -16,6 +16,16 @@ int main()
     s.append(11);
     s.append(2);
     s.append(34);
+    s.append(-90);
+    s.append(300);
+    s.append(123);
+    s.append(232);
+    s.append(-45);
+    s.append(324);
+    s.append(-23);
+    s.append(55);
+    s.append(3);
+    s.append(39);
     //s.bubbleSort();
     //s.insertionSort();
     //s.selectionSort();
@@ -23,7 +33,8 @@ int main()
     //cout<<"Quick sort: "<<endl;
     //s.quickSort(0,s.getIndex());
     int si=s.getIndex();
-    s.mergeSort(0,si);
+    //s.mergeSort(0,si);
+    s.quickerSort(0,si);
     s.show();
     return 0;
 }

@@ -56,9 +56,11 @@ void Sorts::bubbleSort()
 
 void Sorts::show()
 {
+    ofstream out("files/output.txt");
     for(int i=0;i<=length;i++)
     {
         cout<<arr[i]<<" ";
+        out<<arr[i]<<" ";
     }
     cout<<endl;
 }
@@ -174,47 +176,8 @@ void Sorts::selectionSortVersion2() // the first sorting algorithm that requires
     //elements, there is no guarantee that the order of those elements will be preserved.
 }
 
-int Sorts::quickSortPartition(int low,int high)
-{
-    // This is the partition function of quick sort
-    // This function returns an Int value, which is where we left
-    // the sorted value in an array.
-    int pivot = arr[low];
-    int i = low;
-    int j = high;
 
-    do {
-        // Increment i as long as elements are smaller/equal to pivot
-        do {i++;} while (arr[i] <= pivot);
-
-        // Decrement j as long as elements are larger than pivot
-        do {j--;} while (arr[j] > pivot);
-
-        if (i < j){
-            int t=arr[i];
-            arr[i]=arr[j];
-            arr[j]=t;
-        }
-    } while (i < j);
-
-    int t=arr[low];
-    arr[low]=arr[j];
-    arr[j]=t;
-    return j;
-
-}
-
-void Sorts::quickSort(int start, int end)
-{
-    // Quick sort is also called "Selection exchange sort, or Partition Exchange sort
-    if(end>start)
-    {
-
-    int mid=quickSortPartition(start,end);
-        quickSort(start,mid);
-        quickSort(mid+1,end);
-    }
-}
+// DOWN SORTING ALGORITHMS ARE CALLED RECURSIVE ALGORITHMS, QUICKSORT AND MERGE SORTS
 
 // I am going to hardly code MergeSort
 
@@ -257,5 +220,62 @@ void Sorts::mergeSort(int l, int h)
         mergeSort(l,(l+h)/2);
         mergeSort(((l+h)/2)+1,h);
         merging(l,h);
+    }
+}
+
+// BEING QUICK SORT DOES NOT MEAN THAT IT IS THE FASTEST SORTING ALGORITHM. NO, IT IS NOT
+int Sorts::quickerPartition(int l, int h)
+{
+    // This is called partition function
+    // what it does, it takes the first element as the pivot
+    // i loops in array looking for element > pivot (if it finds it it stops)
+    // k starts from behind finding element <= pivot (if it finds it, it stops)
+    // Then, if j<k, I swap arr[k] and arr[j], bigger elements go right and smaller come left.
+    // do this as long as j<k
+
+    // After when j crosses k, swap element[j-1] with pivot.
+
+    int pivot=arr[l];
+    int i,j,k;
+    i=l;
+    j=l+1;
+    k=h;
+    while(j<k)
+    {
+        while(arr[j]<=pivot) // looking for bigger element
+        {
+            j++;
+        }
+        while(arr[k]>pivot) //looking for smaller element
+        {
+            k--;
+        }
+
+        if(j<k) // if j and k still in appropriate range, swap
+        {
+            int t=arr[j];
+            arr[j]=arr[k];
+            arr[k]=t;
+            j++;
+            k--;
+        }
+    }
+    if(arr[j-1]<pivot) // if swap is needed, swap; this may not be true if array has two elements which are already sorted.
+    {
+        int temp=arr[j-1];
+        arr[j-1]=arr[i];
+        arr[i]=temp;
+    }
+    return j-1; // return where you left the pivot. Up to here, pivot is sorted.
+}
+
+void Sorts::quickerSort(int l, int h)
+{
+    // This quickSort is doing partition task on all sides of array, I mean left and right
+    if(l<h) // if array has more than one element.
+    {
+        int m=quickerPartition(l,h);
+        quickerSort(l,m-1);
+        quickerSort(m+1,h);
     }
 }
