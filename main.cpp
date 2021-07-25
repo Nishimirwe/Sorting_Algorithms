@@ -20,7 +20,10 @@ int main()
     //s.insertionSort();
     //s.selectionSort();
     //s.selectionSortVersion2();
-    s.quickSort(0,s.getIndex());
+    //cout<<"Quick sort: "<<endl;
+    //s.quickSort(0,s.getIndex());
+    int si=s.getIndex();
+    s.mergeSort(0,si);
     s.show();
     return 0;
 }

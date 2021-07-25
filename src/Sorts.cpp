@@ -215,3 +215,47 @@ void Sorts::quickSort(int start, int end)
         quickSort(mid+1,end);
     }
 }
+
+// I am going to hardly code MergeSort
+
+void Sorts::merging(int l, int h)
+{
+    int mid=(l+h)/2;
+    int i=l, j=mid+1, k=0;
+    int* a=new int[h-l+5];
+    while(i<=mid && j<=h)
+    {
+        if(arr[i]<arr[j])
+        {
+            a[k++]=arr[i++];
+        }
+        else
+        {
+            a[k++]=arr[j++];
+        }
+    }
+    for(;i<=mid;i++)
+    {
+        a[k++]=arr[i];
+    }
+    for(;j<=h;j++)
+    {
+        a[k++]=arr[j];
+    }
+    int sss=0;
+    for(int hh=l;hh<=h;hh++)
+    {
+        arr[hh]=a[sss];
+        sss++;
+    }
+}
+
+void Sorts::mergeSort(int l, int h)
+{
+    if(l<h)
+    {
+        mergeSort(l,(l+h)/2);
+        mergeSort(((l+h)/2)+1,h);
+        merging(l,h);
+    }
+}

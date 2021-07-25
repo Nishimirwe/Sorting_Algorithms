@@ -34,6 +34,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="files/output.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="include/Sorts.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Sorts.cpp" />

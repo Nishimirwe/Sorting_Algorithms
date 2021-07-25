@@ -1,6 +1,7 @@
 #ifndef SORTS_H
 #define SORTS_H
 #include<iostream>
+#include<fstream>
 using namespace std;
 
 class Sorts
@@ -9,6 +10,7 @@ class Sorts
         int* arr;
         int size;
         int length;
+
     public:
         Sorts(int s);
         void bubbleSort(); // Bubble sort is adaptive sorting algorithm, because, when the
@@ -21,6 +23,8 @@ class Sorts
         int quickSortPartition(int start,int end);
         void quickSort(int start,int end);
         int getIndex(){return this->length;}
+        void merging(int low,int high);
+        void mergeSort(int low, int high);
 };
 
 #endif // BUBBLESORT_H
