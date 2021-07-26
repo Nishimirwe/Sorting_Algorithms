@@ -1,6 +1,23 @@
 #include<iostream>
 using namespace std;
 
+// bin Sort is much similar like count sort
+// They all use little time but they require additional array whose
+// size equals to the larges element in the array to be sorted.
+
+// The idea behind, you create an additional array and add each element
+// new array so that each element is placed in index equal to it(element).
+
+// Then Loop through the created array, adding non empty elements back in original array
+
+// eg: sort 5,4 1;
+// New created array is with 5 size:  - - - - -
+// add all elements in new array, that value equals its index: 1 - - 4 5
+// then loop through (1 - - 4 5) adding back in org array: 1 4 5 (Sorted)
+
+// it uses linked list to do so, while count sort uses array (usual arrays)
+
+
 struct Node
 {
     int data;
@@ -184,3 +201,4 @@ int main()
     cout<<endl;
     return 0;
 }
+
