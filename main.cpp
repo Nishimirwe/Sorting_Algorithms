@@ -43,17 +43,16 @@ int main()
     // AMA GONNA START RADIX SORT, COUNT SORT, BIN/BUCKET SORT AND SHELL SORT
     // Let me create another Sorts variable and use it.
     Sorts srt(50);
+    srt.append(7);
+    srt.append(5);
+    srt.append(20);
+    srt.append(6);
+    srt.append(14);
     srt.append(3);
-    srt.append(6);
-    srt.append(8);
-    srt.append(12);
-    srt.append(10);
-    srt.append(15);
-    srt.append(6);
-    srt.append(6);
-    srt.append(3);
-    srt.append(9);
-    srt.countSort();
-    //srt.show();
+    srt.append(21);
+    int sss=srt.getIndex();
+    srt.quickerSort(0,sss);
+    //srt.countSort();
+    srt.show();
     return 0;
 }

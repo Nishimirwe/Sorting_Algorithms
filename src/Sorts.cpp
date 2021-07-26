@@ -272,12 +272,21 @@ int Sorts::quickerPartition(int l, int h)
 void Sorts::quickerSort(int l, int h)
 {
     // This quickSort is doing partition task on all sides of array, I mean left and right
-    if(l<h) // if array has more than one element.
+    if(l<h-1) // if array has more than one element.
     {
         int m=quickerPartition(l,h);
         quickerSort(l,m-1);
         quickerSort(m+1,h);
     }
+	else
+	{
+		if(arr[h]<arr[l])
+		{
+			int t=arr[l];
+			arr[l]=arr[h];
+			arr[h]=t;
+		}
+	}
 }
 
 // DOWN I AM GON CODE OTHER ALGORITHMS WHICH TAKE LITTLE TIME BUT WITH LARGE SPACE
