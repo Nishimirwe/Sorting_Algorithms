@@ -1,0 +1,6 @@
+->in include folder, there are header files
+->in src files there are cpp file for above headers
+->These cpp has mergeSort,QuickSort, insertion sort, Selectio sort, bubble sort
+
+-> in src folder there are another folder, I named it (BinSort and Radix Sort)
+-->these two sortign algorithms are found in there
